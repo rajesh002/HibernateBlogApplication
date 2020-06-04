@@ -48,7 +48,7 @@
             <form action="${pageContext.request.contextPath}/new" method="post">
         </c:if>
  		<c:if test="${bloglist != null}">
-  		<input type="hidden" name="blogId" value="<c:out value='${bloglist.getBlogId()}' />" />
+  		<input type="hidden" name="blogId" value="<c:out value='${bloglist.getId()}' />" />
    		</c:if>  
 					<c:if test="${bloglist != null}">
             			Edit Blog
@@ -56,7 +56,7 @@
 						<c:if test="${bloglist == null}">
             			Add New Blog
             		</c:if>
-		<input id="title" name="title" value="<c:out value='${bloglist.getBlogTitle()}'/>" placeholder="Title" type="text"/>
+		<input id="title" name="title" value="<c:out value='${bloglist.getTitle()}'/>" placeholder="Title" type="text"/>
 		<textarea id="msg" name="message" placeholder="Description"><c:out value='${bloglist.getBlogDescription()}'/></textarea>
 		<button id="post" type="submit" >POST</button>
 	</form>

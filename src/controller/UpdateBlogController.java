@@ -30,8 +30,8 @@ public class UpdateBlogController extends HttpServlet {
 		LocalDate postedOn = LocalDate.now();
 		System.out.println(blogTitle);
 		Blog blog = new Blog();
-		blog.setBlogId(blogId);
-		blog.setBlogTitle(blogTitle);
+		blog.setId(blogId);
+		blog.setTitle(blogTitle);
 		blog.setBlogDescription(blogDescription);
 		blog.setPostedOn(postedOn);
 		

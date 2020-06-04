@@ -109,7 +109,7 @@ public class BlogController extends HttpServlet {
 		
 		Blog newTodo = new Blog();
 		newTodo.setBlogDescription(description);
-		newTodo.setBlogTitle(title);
+		newTodo.setTitle(title);
 		newTodo.setPostedOn(LocalDate.now());
 		blogDAO.insertBlog(newTodo);
 		response.sendRedirect("list");
@@ -128,7 +128,7 @@ public class BlogController extends HttpServlet {
 		//Blog updateTodo = new Blog(id, title, username, description, targetDate, isDone);
 		Blog updateTodo = new Blog();
 		updateTodo.setBlogDescription(description);
-		updateTodo.setBlogTitle(title);
+		updateTodo.setTitle(title);
 		updateTodo.setPostedOn(LocalDate.now());
 		System.out.println("HEY vEERA "+updateTodo);
 		try {

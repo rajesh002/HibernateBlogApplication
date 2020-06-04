@@ -34,8 +34,8 @@ public class ViewAllBlogController extends HttpServlet {
 			e.printStackTrace();
 		}
 		for(Blog bloglist:listBlog) {
-			System.out.println(bloglist.getBlogId());
-			System.out.println(bloglist.getBlogTitle());
+			System.out.println(bloglist.getId());
+			System.out.println(bloglist.getTitle());
 			System.out.println(bloglist.getBlogDescription());
 			System.out.println(bloglist.getPostedOn());
 		}

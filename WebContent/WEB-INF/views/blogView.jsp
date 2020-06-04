@@ -34,12 +34,12 @@
       <div class="article-card">
             <img src="./assets/java card image.svg" alt="">
             <div class="card-text">
-                <h1 id="blog-title"><c:out value="${blog.getBlogTitle()}"  /></h1>
+                <h1 id="blog-title"><c:out value="${blog.getTitle()}"  /></h1>
                 <p id="blog-description"><c:out value="${blog.getBlogDescription()}" /></p>
                 <p>Posted on <b><c:out value="${blog.getPostedOn()}" /></b> </p>
             </div>
       	  <div class="card-buttons">
-             <a href="edit?id=<c:out value='${blog.getBlogId()}' />"><button type="button" id="edit">EDIT</button></a> <span>|</span><a href="delete?id=<c:out value='${blog.getBlogId()}'/>"><button id="delete">DELETE</button></a>
+             <a href="edit?id=<c:out value='${blog.getId()}' />"><button type="button" id="edit">EDIT</button></a> <span>|</span><a href="delete?id=<c:out value='${blog.getId()}'/>"><button id="delete">DELETE</button></a>
             </div>
         </div>
      </c:forEach> 

@@ -16,31 +16,27 @@ import javax.persistence.Table;
 
 public class Blog{
 	@Id
-	@Column(name="BLOGID")
+	@Column(name="ID")
 	@GeneratedValue(strategy = GenerationType.SEQUENCE,generator= "seq_blog")
 	@SequenceGenerator(name="seq_blog", sequenceName="seq_blog",allocationSize=1,initialValue=1) 
-	private int blogId;
-	@Column(name="BLOGTITLE")
-	private String blogTitle;
-	@Column(name="BLOGDESCRIPTION")
+	private int Id;
+	@Column(name="TITLE")
+	private String Title;
+	@Column(name="DESCRIPTION")
 	private String blogDescription;
 	@Column(name="POSTEDON")
 	private LocalDate postedOn;
-	
-	
-	
-	
-	public int getBlogId() {
-		return blogId;
+	public int getId() {
+		return Id;
 	}
-	public void setBlogId(int blogId) {
-		this.blogId = blogId;
+	public void setId(int id) {
+		Id = id;
 	}
-	public String getBlogTitle() {
-		return blogTitle;
+	public String getTitle() {
+		return Title;
 	}
-	public void setBlogTitle(String blogTitle) {
-		this.blogTitle = blogTitle;
+	public void setTitle(String title) {
+		Title = title;
 	}
 	public String getBlogDescription() {
 		return blogDescription;
@@ -54,4 +50,7 @@ public class Blog{
 	public void setPostedOn(LocalDate postedOn) {
 		this.postedOn = postedOn;
 	}
+	
+	
+	
 }
